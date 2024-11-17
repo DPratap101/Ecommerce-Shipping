@@ -5,6 +5,7 @@ const warehouseController = require('../controllers/warehouse.controller');
 const router = express.Router();
 
 // Warehouse Routes
+router.get('/warehouses/nearest', warehouseController.getNearestWarehouse);
 router.get('/warehouses', warehouseController.getAllWarehouses);
 router.post('/warehouses', warehouseController.createWarehouse);
 

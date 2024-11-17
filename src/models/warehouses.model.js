@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const warehouseSchema = new mongoose.Schema({
-    warehouseId: { type: String, required: true },
+    warehouseName: { type: String, required: true },
     location: {
         lat: { type: Number, required: true },
         lng: { type: Number, required: true },
