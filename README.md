@@ -258,6 +258,7 @@ Use tools like Postman to test the endpoints listed in the API documentation.
 Feel free to open issues or submit pull requests for improvements and new features!
 
 ## License
+This project is licensed under the MIT License.
 ```vbnet
 This structure ensures clarity and proper formatting for your `README.md` file. Let me know if you'd like further customization!
 ```
