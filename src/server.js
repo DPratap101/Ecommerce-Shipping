@@ -1,25 +1,21 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const redisClient = require('./utils/redisClient.utils');
-
+const apiRoutes = require('./routes/api.routes')
 const { connectDB } = require('./config/db.config');
+
 const app = express();
 
 // Middleware
 app.use(express.json());
 
-// Database connection
+// Connect to MongoDB
 connectDB();
 
-// Caching connection (Redis)
-redisClient.connect().then(() => {
-    console.log('Redis connected');
-}).catch(err => console.error('Redis connection error', err));
+// Routes
+app.use('/api', apiRoutes);
 
-
-
-// Server setup
+// Server start
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
