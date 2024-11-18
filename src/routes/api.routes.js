@@ -10,6 +10,6 @@ router.get('/warehouses', warehouseController.getAllWarehouses);
 router.post('/warehouses', warehouseController.createWarehouse);
 
 router.get('/shipping-charge', shippingController.getShippingCharge);
-router.get('/shipping-charge/calculate', calculateShipping.calculateShippingCharge);
+router.post('/shipping-charge/calculate', calculateShipping.calculateShippingCharge);
 
 module.exports = router;
